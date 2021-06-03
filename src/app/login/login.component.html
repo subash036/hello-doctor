@@ -1,0 +1,28 @@
+<div class="login-container">
+
+  <div class="align-middle wrapper fadeInDown">
+
+    <div id="formContent">
+      <!-- Tabs Titles -->
+
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <img src="../../assets/images/doctor_logo_classic_round.png" id="icon" alt="User Icon" />
+      </div>
+
+      <!-- Login Form -->
+      <form>
+        <input [(ngModel)]="loginData.firstName" type="text" id="login" class="fadeIn second" name="login" placeholder="login">
+        <input [(ngModel)]="loginData.password" type="password" id="password" class="fadeIn third" name="login" placeholder="password">
+        <input (click)="login()" type="button" class="fadeIn fourth" value="Log In">
+      </form>
+
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+        <a class="underlineHover" href="#">Forgot Password?</a>
+      </div>
+
+    </div>
+  </div>
+
+</div>

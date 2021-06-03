@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="row">
+     <div class="col-md-12">
+        <div id="content" class="content content-full-width">
+           <!-- begin profile -->
+           <div class="profile">
+              <div class="profile-header">
+                 <!-- BEGIN profile-header-cover -->
+                 <div class="profile-header-cover"></div>
+                 <!-- END profile-header-cover -->
+                 <!-- BEGIN profile-header-content -->
+                 <div class="profile-header-content">
+
+                    <!-- BEGIN profile-header-img -->
+                    <div class="profile-header-img">
+                       <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="">
+                    </div>
+                    <!-- END profile-header-img -->
+                    <!-- BEGIN profile-header-info -->
+                    <div class="profile-header-info">
+                       <h4 class="m-t-10 m-b-5">{{model?.firstName}}</h4>
+                       <p class="m-b-10">{{model?.cityName}}&nbsp;</p>
+                       <a href="#" class="btn btn-sm btn-info mb-2">Edit Profile</a>
+                    </div>
+                    <button class="btn btn-sm btn-info mb-2 logout" (click)="logOut()">Logout</button>
+
+                    <!-- END profile-header-info -->
+
+                 </div>
+                 <!-- END profile-header-content -->
+                 <!-- BEGIN profile-header-tab -->
+                 <div class="clearfix"></div>
+                 <ul class="profile-header-tab nav nav-tabs">
+                    <li (click)="setActiveTab(1)" class="nav-item"><a href="#profile-about" [ngClass]="{'active show': activeTab == 1}" class="nav-link" data-toggle="tab">ABOUT</a><div class="arrow-up"></div></li>
+                    <li (click)="setActiveTab(2)" class="nav-item"><a href="#profile-health" [ngClass]="{'active show': activeTab == 2}" class="nav-link" data-toggle="tab">HEALTH</a></li>
+                    <li (click)="setActiveTab(3)" class="nav-item"><a href="#profile-report" [ngClass]="{'active show': activeTab == 3}" class="nav-link" data-toggle="tab">REPORT UPLOAD</a></li>
+                    <li (click)="setActiveTab(4)" class="nav-item"><a href="#profile-history" [ngClass]="{'active show': activeTab == 4}" class="nav-link" data-toggle="tab">HISTORY</a></li>
+                 </ul>
+
+                 <!-- END profile-header-tab -->
+
+              </div>
+           </div>
+           <!-- end profile -->
+           <!-- begin profile-content -->
+           <div class="profile-content">
+              <!-- begin tab-content -->
+              <div class="tab-content p-0">
+                 <!-- begin #profile-post tab -->
+                 <app-about *ngIf="activeTab == 1" [ngClass]="{'active show': activeTab == 1}" class="tab-pane fade"></app-about>
+                 <app-question *ngIf="activeTab == 2" [ngClass]="{'active show': activeTab == 2}" class="tab-pane fade"></app-question>
+                 <app-upload *ngIf="activeTab == 3" [ngClass]="{'active show': activeTab == 3}" class="tab-pane fade">UPLOAD</app-upload>
+                 <app-history *ngIf="activeTab == 4" [ngClass]="{'active show': activeTab == 4}" class="tab-pane fade" id="profile-post"></app-history>
+
+                 <!-- end #profile-post tab -->
+              </div>
+              <!-- end tab-content -->
+           </div>
+           <!-- end profile-content -->
+        </div>
+     </div>
+  </div>
+</div>
