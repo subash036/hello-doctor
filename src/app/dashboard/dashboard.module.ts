@@ -1,3 +1,4 @@
+import { PanelWrapperComponent } from './../common/panel-wrapper.component';
 import { UploadFilesService } from 'src/app/services/upload-files.service';
 import { FormlyMaterialModule } from '@ngx-formly/material';
 import { FormlyFieldDate } from './../common/datePicker';
@@ -20,7 +21,7 @@ import { UploadFilesComponent } from './upload-files/upload-files.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [DashboardComponent, AboutComponent, FormlyFieldDate, QuestionComponent, UploadComponent, HistoryComponent, UploadFilesComponent],
+  declarations: [DashboardComponent, AboutComponent, FormlyFieldDate, QuestionComponent, UploadComponent, HistoryComponent, UploadFilesComponent, PanelWrapperComponent],
   imports: [
     CommonModule,
     DashboardRoutingModule,
@@ -32,6 +33,9 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     FormlyModule.forRoot({
       extras: { lazyRender: true },
+      wrappers: [
+        { name: 'panel', component: PanelWrapperComponent },
+      ],
       validationMessages: [
         { name: 'required', message: 'This field is required' },
       ],
