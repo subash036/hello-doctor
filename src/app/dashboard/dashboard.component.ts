@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  public activeTab: number = 2
+  public activeTab: number = 1
   constructor(private uploadService: UploadFilesService) { }
   public model: any = {};
 
