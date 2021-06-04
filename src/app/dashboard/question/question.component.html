@@ -6,7 +6,7 @@
 
 <div class="preview-content" *ngIf="submitFlag && previewFlag">
   <ul class="list-group" *ngFor="let item of previewDataList; index as i;">
-    <li class="list-group-item">{{item.key}} : <strong>{{item.value.radio | json}}</strong>
+    <li class="list-group-item">{{item.key}} : <strong>{{item.value.radio}}</strong>
       <hr>
       <div style="padding-left: 100px;" class="otehr-list">{{item.outerKey}}:<strong>{{item.outerValue}}</strong></div>
       <li>
