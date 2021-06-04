@@ -14,18 +14,17 @@ import { FieldWrapper } from '@ngx-formly/core';
             type="radio"
             [name]="field.key"
             [id]="field.key"
+            checked
           />
           <label class="form-check-label" [for]="field.key"> No </label>
         </div>
         <div class="form-check">
           <input
-
             (click)="checkValue('No')"
             class="form-check-input"
             type="radio"
             [name]="field.key"
             [id]="field.key"
-            checked
           />
           <label class="form-check-label" [for]="field.key"> Yes </label>
         </div>

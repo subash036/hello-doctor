@@ -3,6 +3,7 @@ export const question = [
   {
     key: 'areyoulaergic',
     wrappers: ['panel'],
+    defaultValue: 'No',
     templateOptions: { label: 'Are you alergic?' },
     fieldGroup: [
       {
@@ -25,6 +26,7 @@ export const question = [
   {
     key: 'doyouusedrug',
     wrappers: ['panel'],
+    defaultValue: 'No',
     templateOptions: { label: 'Do you use drug?' },
     fieldGroup: [
       {
@@ -46,6 +48,7 @@ export const question = [
   {
     key: 'doyousmoke',
     wrappers: ['panel'],
+    defaultValue: 'No',
     templateOptions: { label: 'Do you smoke?' },
     fieldGroup: [
       {
@@ -61,6 +64,7 @@ export const question = [
   {
     key: 'Have you been infected by COVID-19 on last 15 days?',
     wrappers: ['panel'],
+    defaultValue: 'No',
     templateOptions: { label: 'Have you been infected by COVID-19 on last 15 days?' },
     fieldGroup: [
       {
@@ -82,6 +86,7 @@ export const question = [
   {
     key: 'Do you have any symptoms?',
     wrappers: ['panel'],
+    defaultValue: 'No',
     templateOptions: { label: 'Do you have any symptoms?' },
     fieldGroup: [
       {
