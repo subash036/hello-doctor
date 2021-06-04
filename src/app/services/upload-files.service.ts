@@ -1,6 +1,7 @@
+import { FormlyFieldConfig } from '@ngx-formly/core';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpRequest, HttpEvent } from '@angular/common/http';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, forkJoin, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -28,5 +29,21 @@ export class UploadFilesService {
 
   getFiles(): Observable<any> {
     return this.http.get(`${this.baseUrl}/files`);
+  }
+
+  getUserData(): Observable<any> {
+    return forkJoin([this.getUser(), this.getFields()]);
+  }
+
+  getUser() {
+    return this.http.get<{ firstName: string, lastName: string }>('assets/json-powered/user_json');
+  }
+
+  getFields() {
+    return this.http.get<FormlyFieldConfig[]>('assets/json-powered/user-form_json');
+  }
+
+  getColors() {
+    return this.http.get<{ label: string; value: string }[]>('assets/json-powered/colors_json');
   }
 }

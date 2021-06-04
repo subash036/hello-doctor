@@ -1,3 +1,4 @@
+import { UploadFilesService } from 'src/app/services/upload-files.service';
 import { FormlyMaterialModule } from '@ngx-formly/material';
 import { FormlyFieldDate } from './../common/datePicker';
 import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
@@ -41,7 +42,9 @@ import { HttpClientModule } from '@angular/common/http';
         },
       ],
     }),
+
   ],
   exports: [DashboardComponent],
+  providers:[UploadFilesService]
 })
 export class DashboardModule {}
