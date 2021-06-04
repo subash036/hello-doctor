@@ -43,6 +43,6 @@ export class PanelWrapperComponent extends FieldWrapper {
     this.yesNo = radio;
     // console.log("🚀 ~ file: panel-wrapper.component.ts ~ line 45 ~ PanelWrapperComponent ~ checkValue ~ this.field", this.field)
     // console.log("🚀 ~ file: panel-wrapper.component.ts ~ line 45 ~ PanelWrapperComponent ~ checkValue ~ this.field", this.model)
-    // this.model['radio'] = radio;
+    this.model['radio'] = radio;
   }
 }
