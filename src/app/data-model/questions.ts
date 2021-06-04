@@ -58,4 +58,40 @@ export const question = [
       },
     ],
   },
+  {
+    key: 'Have you been infected by COVID-19 on last 15 days?',
+    wrappers: ['panel'],
+    templateOptions: { label: 'Have you been infected by COVID-19 on last 15 days?' },
+    fieldGroup: [
+      {
+        key: 'What disease?',
+        type: 'select',
+        className: 'col-3',
+        templateOptions: {
+          label: 'What disease?',
+          placeholder: 'Select',
+          multiple: true,
+          options: [
+            { label: 'Disease A', value: 'Disease A' },
+            { label: 'Disease B', value: 'Disease B' },
+          ],
+        },
+      },
+    ],
+  },
+  {
+    key: 'Do you have any symptoms?',
+    wrappers: ['panel'],
+    templateOptions: { label: 'Do you have any symptoms?' },
+    fieldGroup: [
+      {
+        className: 'col-3',
+        type: 'input',
+        key: 'What disease?',
+        templateOptions: {
+          label: 'What disease?',
+        },
+      },
+    ],
+  },
 ];
