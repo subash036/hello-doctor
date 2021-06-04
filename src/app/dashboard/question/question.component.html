@@ -6,7 +6,7 @@
 
 <div class="preview-content" *ngIf="submitFlag && previewFlag">
   <ul class="list-group" *ngFor="let item of previewDataList; index as i;">
-    {{item | json}}
+    <!-- {{item | json}} -->
     <li class="list-group-item">{{item.key}} : <strong>{{item.value}}</strong><li>
   </ul>
 </div>

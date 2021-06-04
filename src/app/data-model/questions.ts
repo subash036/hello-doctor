@@ -122,23 +122,23 @@ export const question = [
       },
     },],
   },
-  // {
-  //   key: 'doyouusedrug',
-  //   wrappers: ['panel'],
-  //   templateOptions: { label: 'Do you use drug?' },
-  //   fieldGroup: [{
-  //     key: 'Whattypeofalergydoyouhave',
-  //     type: 'select',
-  //     className: 'col-3',
-  //     templateOptions: {
-  //       label: 'What type of drug do you use?',
-  //       placeholder: 'Select',
-  //       multiple: true,
-  //       options: [
-  //         { label: 'Drug A', value: 'Drug A' },
-  //         { label: 'Drug B', value: 'Drug B' }
-  //       ],
-  //     },
-  //   },],
-  // },
+  {
+    key: 'doyouusedrug',
+    wrappers: ['panel'],
+    templateOptions: { label: 'Do you use drug?' },
+    fieldGroup: [{
+      key: 'Whattypeofalergydoyouhave',
+      type: 'select',
+      className: 'col-3',
+      templateOptions: {
+        label: 'What type of drug do you use?',
+        placeholder: 'Select',
+        multiple: true,
+        options: [
+          { label: 'Drug A', value: 'Drug A' },
+          { label: 'Drug B', value: 'Drug B' }
+        ],
+      },
+    },],
+  },
 ];

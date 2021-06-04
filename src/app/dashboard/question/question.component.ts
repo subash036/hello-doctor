@@ -42,7 +42,7 @@ export class QuestionComponent implements OnInit {
     console.log("🚀 ~ file: question.component.ts ~ line 46 ~ QuestionComponent ~ this.previewDataList=this.fields.map ~ data", this.model)
       return {
         value:this.model[data.key][data.fieldGroup[0].templateOptions.key],
-        key:data.label,
+        key:data.fieldGroup[0].templateOptions.label,
         // outerValue:this.model[data.key],
         // outerKey:data.label
       };
